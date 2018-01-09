@@ -10,5 +10,12 @@
     "graphql"
   ],
   "author": "Jetro Tull Roa",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.9"
+  }
 }
