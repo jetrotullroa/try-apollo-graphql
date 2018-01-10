@@ -29,7 +29,7 @@ const RootQuery = new GraphQLObjectType({
       },
       resolve(parentValue, args) {
         return axios
-          .get(`http://localhost:3000/customers/${args.id}`)
+          .get(`http://localhost:3333/customers/${args.id}`)
           .then(customer => customer.data);
       }
     },
@@ -37,7 +37,7 @@ const RootQuery = new GraphQLObjectType({
       type: new GraphQLList(CustomerType),
       resolve(parentValue, args) {
         return axios
-          .get("http://localhost:3000/customers")
+          .get("http://localhost:3333/customers")
           .then(customers => customers.data);
       }
     }
@@ -61,7 +61,7 @@ const mutation = new GraphQLObjectType({
           age: args.age
         };
         return axios
-          .post("http://localhost:3000/customers", newCustomer)
+          .post("http://localhost:3333/customers", newCustomer)
           .then(customers => customers.data);
       }
     },
@@ -81,7 +81,7 @@ const mutation = new GraphQLObjectType({
         };
 
         return axios
-          .patch(`http://localhost:3000/customers/${args.id}`, changeCustomer)
+          .patch(`http://localhost:3333/customers/${args.id}`, changeCustomer)
           .then(customer => customer.data);
       }
     },
@@ -92,7 +92,7 @@ const mutation = new GraphQLObjectType({
       },
       resolve(parentValue, args) {
         return axios
-          .delete(`http://localhost:3000/customers/${args.id}`)
+          .delete(`http://localhost:3333/customers/${args.id}`)
           .then(customer => customer.data);
       }
     }
