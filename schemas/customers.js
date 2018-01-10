@@ -43,7 +43,63 @@ const RootQuery = new GraphQLObjectType({
     }
   }
 });
+// Mutation
+const mutation = new GraphQLObjectType({
+  name: "Mutation",
+  fields: {
+    addCustomer: {
+      type: CustomerType,
+      args: {
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        email: { type: new GraphQLNonNull(GraphQLString) },
+        age: { type: new GraphQLNonNull(GraphQLInt) }
+      },
+      resolve(parentValue, args) {
+        const newCustomer = {
+          name: args.name,
+          email: args.email,
+          age: args.age
+        };
+        return axios
+          .post("http://localhost:3000/customers", newCustomer)
+          .then(customers => customers.data);
+      }
+    },
+    updateCustomer: {
+      type: CustomerType,
+      args: {
+        id: { type: new GraphQLNonNull(GraphQLString) },
+        name: { type: GraphQLString },
+        email: { type: GraphQLString },
+        age: { type: GraphQLInt }
+      },
+      resolve(parentValue, args) {
+        const changeCustomer = {
+          name: args.name,
+          email: args.email,
+          age: args.age
+        };
+
+        return axios
+          .patch(`http://localhost:3000/customers/${args.id}`, changeCustomer)
+          .then(customer => customer.data);
+      }
+    },
+    deleteCustomer: {
+      type: CustomerType,
+      args: {
+        id: { type: new GraphQLNonNull(GraphQLString) }
+      },
+      resolve(parentValue, args) {
+        return axios
+          .delete(`http://localhost:3000/customers/${args.id}`)
+          .then(customer => customer.data);
+      }
+    }
+  }
+});
 
 module.exports = new GraphQLSchema({
-  query: RootQuery
+  query: RootQuery,
+  mutation
 });

@@ -1,16 +1,10 @@
 {
   "customers": [
     {
-      "id": "1",
-      "name": "John Doe",
-      "email": "johndoe@example.com",
-      "age": 21
-    },
-    {
       "id": "2",
-      "name": "Jane Day",
+      "name": "Jane Dayz",
       "email": "janeday@example.com",
-      "age": 33
+      "age": 55
     },
     {
       "id": "3",
@@ -23,6 +17,18 @@
       "name": "Death Bringerz",
       "email": "bringdeath@example.com",
       "age": 999
+    },
+    {
+      "name": "Gazel Skeeper",
+      "email": "gsk@example.com",
+      "age": 23,
+      "id": "hAuOMzT"
+    },
+    {
+      "name": "Gladio Starley",
+      "email": "starglad@example.com",
+      "age": 44,
+      "id": "od6EKhI"
     }
   ]
 }
