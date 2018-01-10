@@ -1,0 +1,28 @@
+{
+  "customers": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "age": 21
+    },
+    {
+      "id": "2",
+      "name": "Jane Day",
+      "email": "janeday@example.com",
+      "age": 33
+    },
+    {
+      "id": "3",
+      "name": "Grim Jaw",
+      "email": "grimjawe@noemail.com",
+      "age": 18
+    },
+    {
+      "id": "4",
+      "name": "Death Bringerz",
+      "email": "bringdeath@example.com",
+      "age": 999
+    }
+  ]
+}
