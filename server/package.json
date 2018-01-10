@@ -1,0 +1,24 @@
+{
+  "name": "cubase",
+  "version": "1.0.0",
+  "description": "a GraphQL server",
+  "main": "server.js",
+  "scripts": {
+    "dev:server": "nodemon server.js",
+    "json:server": "json-server -p 3333 --watch data.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["graphql"],
+  "author": "Jetro Tull Roa",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.12.3",
+    "json-server": "^0.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.9"
+  }
+}

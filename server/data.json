@@ -1,0 +1,34 @@
+{
+  "customers": [
+    {
+      "id": "2",
+      "name": "Jane Dayz",
+      "email": "janeday@example.com",
+      "age": 55
+    },
+    {
+      "id": "3",
+      "name": "Grim Jaw",
+      "email": "grimjawe@noemail.com",
+      "age": 18
+    },
+    {
+      "id": "4",
+      "name": "Death Bringerz",
+      "email": "bringdeath@example.com",
+      "age": 999
+    },
+    {
+      "name": "Gazel Skeeper",
+      "email": "gsk@example.com",
+      "age": 23,
+      "id": "hAuOMzT"
+    },
+    {
+      "name": "Gladio Starley",
+      "email": "starglad@example.com",
+      "age": 44,
+      "id": "od6EKhI"
+    }
+  ]
+}
