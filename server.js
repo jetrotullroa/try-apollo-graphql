@@ -1,12 +1,12 @@
 const express = require("express");
 const expressGQL = require("express-graphql");
-const schema = require("./schema.js");
+const customers = require("./schemas/customers");
 const app = express();
 
 app.use(
-  "/graphql",
+  "/graphql/customers",
   expressGQL({
-    schema: schema,
+    schema: customers,
     graphiql: true
   })
 );
