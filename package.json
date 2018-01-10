@@ -4,6 +4,7 @@
   "description": "a GraphQL server",
   "main": "server.js",
   "scripts": {
+    "dev:server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,7 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "express-graphql": "^0.6.11"
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.12.3"
   },
   "devDependencies": {
     "nodemon": "^1.14.9"
