@@ -27,7 +27,7 @@ class App extends Component {
               <Route exact path="/customers/new" component={CustomerNew} />
               <Route
                 exact
-                path="/customer/:customer_id"
+                path="/customers/:customer_id"
                 component={CustomerDetails}
               />
             </Switch>
